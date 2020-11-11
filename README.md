@@ -1,3 +1,11 @@
+
+<style>
+    table th:nth-of-type(1) {width: 10%;}
+    table th:nth-of-type(2) {width: 20%;}
+    table th:nth-of-type(3) {width: 35%;}
+    table th:nth-of-type(4) {width: 25%;}
+    table th:nth-of-type(5) {width: 10%;}
+</style>
 # FastAPI Packages
 |                                     Package                                     |                                       Description                                        |     Created at     |  Last commit  | Stars |
 |---------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|--------------------|---------------|------:|
@@ -15,7 +23,7 @@
 | [starlette_exporter](https://github.com/stephenhillier/starlette_exporter)      | Prometheus exporter for Starlette and FastAPI                                            | October 26, 2019   | Up-to-date    |    65 |
 | [fastapi_login](https://github.com/MushroomMaula/fastapi_login)                 | FastAPI-Login tries to provide similar functionality as Flask-Login does.                | October 21, 2019   | Up-to-date    |    82 |
 | [fastapi-permissions](https://github.com/holgi/fastapi-permissions)             | row level security for FastAPI framework                                                 | July 19, 2019      | Up-to-date    |    78 |
-| [slowapi](https://github.com/laurentS/slowapi)                                  | A rate limiter for Starlette and FastAPI                                                 | February 21, 2020  | Up-to-date    |    82 |
+| [slowapi](https://github.com/laurentS/slowapi)                                  | A rate limiter for Starlette and FastAPI                                                 | February 21, 2020  | Up-to-date    |    83 |
 | [fastapi_simple_security](https://github.com/mrtolkien/fastapi_simple_security) | API-key based security utilities for FastAPI, focused on simplicity of use               | August 27, 2020    | 2 months ago  |     6 |
 | [fastapi-versioning](https://github.com/DeanWay/fastapi-versioning)             | api versioning for fastapi web applications                                              | December 02, 2019  | 2 months ago  |    84 |
 | [fastapi-plugins](https://github.com/madkote/fastapi-plugins)                   | FastAPI framework plugins                                                                | November 20, 2019  | 4 months ago  |    59 |
