@@ -1,4 +1,5 @@
 import json
+import os
 from datetime import date, datetime
 
 from dateutil import relativedelta
@@ -9,16 +10,14 @@ GITHUB_URL = "http://github.com"
 HEADERS = ("Package", "Author", "Last commit", "Stars")
 DATA_FORMAT = "%Y-%m-%dT%H:%M:%SZ"
 
+github_access_token = os.getenv("ACCESS_TOKEN_GITHUB")
 today = date.today()
 
 # Repository name, Author name, last commit, stars
 value_matrix = []
 with open("package_list.json", "r") as f:
     for data in json.load(f):
-        repo_client = GitHubClient(
-            **data,
-            tokens=["f0d6733593a65e7fce8ae7ddec581bca8ecbc282"],
-        )
+        repo_client = GitHubClient(**data, tokens=[github_access_token])
         values = json.loads(repo_client.repo())
         month_diff = relativedelta.relativedelta(
             today, datetime.strptime(values["pushed_at"], DATA_FORMAT)
