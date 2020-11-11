@@ -1,10 +1,27 @@
 [
-  {
-    "owner": "dmontagu",
-    "repository": "fastapi-utils"
-  },
-  {
-    "owner": "uhavin",
-    "repository": "slackers"
-  }
+  "dmontagu/fastapi-utils",
+  "dmontagu/fastapi-auth",
+  "long2ice/fastapi-admin",
+  "uhavin/slackers",
+  "MushroomMaula/fastapi_login",
+  "IndominusByte/fastapi-jwt-auth",
+  "holgi/fastapi-permissions",
+  "jmagnusson/fastapi-security",
+  "mrtolkien/fastapi_simple_security",
+  "frankie567/fastapi-users",
+  "mfreeborn/fastapi-sqlalchemy",
+  "tortoise/tortoise-orm",
+  "python-gino/gino",
+  "encode/orm",
+  "collerek/ormar",
+  "dmontagu/fastapi_client",
+  "DeanWay/fastapi-versioning",
+  "comeuplater/fastapi_cache",
+  "identixone/fastapi_contrib",
+  "sabuhish/fastapi-mail",
+  "madkote/fastapi-plugins",
+  "skallfass/fastapi_serviceutils",
+  "laurents/slowapi",
+  "perdy/starlette-prometheus",
+  "stephenhillier/starlette_exporter"
 ]
