@@ -4,3 +4,6 @@ tmp/*
 
 # Editor
 .vscode
+
+# Environment variables
+.env

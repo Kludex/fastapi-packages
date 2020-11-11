@@ -14,3 +14,5 @@ jobs:
         with:
           script_file: update_script.py
           update_file: README.md
+        env:
+          ACCESS_TOKEN_GITHUB: ${{ secrets.ACCESS_TOKEN_GITHUB }}
