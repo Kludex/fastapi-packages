@@ -1,33 +1,35 @@
 import json
 import os
-from datetime import date, datetime
+from datetime import date
 
 from dateutil import relativedelta
-from perceval.backends.core.github import GitHubClient
+from github import Github
 from pytablewriter import MarkdownTableWriter
 
 GITHUB_URL = "http://github.com"
-HEADERS = ("Package", "Author", "Last commit", "Stars")
-DATA_FORMAT = "%Y-%m-%dT%H:%M:%SZ"
+HEADERS = ("Package", "Author", "Description", "Created at", "Last commit", "Stars")
+DATA_FORMAT = "%B %d, %Y"
 
 github_access_token = os.getenv("ACCESS_TOKEN_GITHUB")
-today = date.today()
+g = Github(github_access_token)
 
-# Repository name, Author name, last commit, stars
 value_matrix = []
 with open("package_list.json", "r") as f:
-    for data in json.load(f):
-        repo_client = GitHubClient(**data, tokens=[github_access_token])
-        values = json.loads(repo_client.repo())
-        month_diff = relativedelta.relativedelta(
-            today, datetime.strptime(values["pushed_at"], DATA_FORMAT)
-        ).months
+    for repo_full_name in json.load(f):
+        repo = g.get_repo(repo_full_name)
+
+        commits = repo.get_commits()
+        last_commit_date = [commit.commit.author.date for commit in commits][0]
+
+        month_diff = relativedelta.relativedelta(date.today(), last_commit_date).months
         value_matrix.append(
             [
-                f'[{values["name"]}]({values["html_url"]})',
-                f'[{values["owner"]["login"]}]({values["owner"]["html_url"]})',
+                f"[{repo.name}]({repo.homepage})",
+                f"[{repo.owner.name}]({repo.owner.html_url})",
+                repo.description,
+                repo.created_at.strftime(DATA_FORMAT),
                 "Up-to-date" if month_diff < 2 else f"{month_diff} months ago",
-                values["stargazers_count"],
+                repo.stargazers_count,
             ]
         )
 
