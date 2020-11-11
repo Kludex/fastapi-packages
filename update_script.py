@@ -53,13 +53,4 @@ writer = MarkdownTableWriter(
     table_name="FastAPI Packages", headers=HEADERS, value_matrix=value_matrix, margin=1
 )
 
-css = """
-<style>
-    table th:nth-of-type(1) {width: 10%;}
-    table th:nth-of-type(2) {width: 20%;}
-    table th:nth-of-type(3) {width: 35%;}
-    table th:nth-of-type(4) {width: 25%;}
-    table th:nth-of-type(5) {width: 10%;}
-</style>"""
-print(css)
 writer.write_table()
