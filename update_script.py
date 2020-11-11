@@ -2,7 +2,6 @@ import json
 from datetime import date, datetime
 
 from dateutil import relativedelta
-from perceval.backends.core.git import Git
 from perceval.backends.core.github import GitHubClient
 from pytablewriter import MarkdownTableWriter
 

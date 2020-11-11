@@ -1,0 +1,2 @@
+perceval==0.12.24
+pytablewriter==0.58.0
