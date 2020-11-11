@@ -1,9 +1,6 @@
 # FastAPI Packages
 |                                     Package                                     |                                       Description                                        |     Created at     |  Last commit  | Stars |
 |---------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|--------------------|---------------|------:|
-| [gino](https://github.com/python-gino/gino)                                     | GINO Is Not ORM - a Python asyncio ORM on SQLAlchemy core.                               | July 21, 2017      | Up-to-date    |  1843 |
-| [tortoise-orm](https://github.com/tortoise/tortoise-orm)                        | Familiar asyncio ORM for python, built with relations in mind                            | March 29, 2018     | Up-to-date    |  1464 |
-| [orm](https://github.com/encode/orm)                                            | An async ORM. 🗃                                                                          | February 12, 2019  | 7 months ago  |  1107 |
 | [fastapi-users](https://github.com/frankie567/fastapi-users)                    | Ready-to-use and customizable users management for FastAPI                               | October 05, 2019   | Up-to-date    |   409 |
 | [fastapi-admin](https://github.com/long2ice/fastapi-admin)                      | FastAPI Admin Dashboard based on FastAPI and Tortoise ORM.                               | April 06, 2020     | Up-to-date    |   311 |
 | [fastapi-utils](https://github.com/dmontagu/fastapi-utils)                      | Reusable utilities for FastAPI                                                           | January 19, 2020   | 8 months ago  |   395 |
