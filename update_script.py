@@ -1,13 +1,21 @@
 import json
 import os
 from datetime import date
+from typing import List
 
 from dateutil import relativedelta
 from github import Github
 from pytablewriter import MarkdownTableWriter
 
+
+def kludex_sort(table: List[List[str]]):
+    stars = sorted(table, key=lambda x: x[HEADERS.index("Stars")] // 100, reverse=True)
+    last_commit = sorted(stars, key=lambda x: x[HEADERS.index("Last commit")])
+    return last_commit
+
+
 GITHUB_URL = "http://github.com"
-HEADERS = ("Package", "Author", "Description", "Created at", "Last commit", "Stars")
+HEADERS = ("Package", "Description", "Created at", "Last commit", "Stars")
 DATA_FORMAT = "%B %d, %Y"
 
 github_access_token = os.getenv("ACCESS_TOKEN_GITHUB")
@@ -24,16 +32,19 @@ with open("package_list.json", "r") as f:
         month_diff = relativedelta.relativedelta(date.today(), last_commit_date).months
         value_matrix.append(
             [
-                f"[{repo.name}]({repo.homepage})",
-                f"[{repo.owner.name}]({repo.owner.html_url})",
+                f"[{repo.name}]({repo.html_url})",
                 repo.description,
                 repo.created_at.strftime(DATA_FORMAT),
-                "Up-to-date" if month_diff < 2 else f"{month_diff} months ago",
+                month_diff,
                 repo.stargazers_count,
             ]
         )
 
-value_matrix.sort(key=lambda x: x[3], reverse=True)
+value_matrix = kludex_sort(value_matrix)
+for value in value_matrix:
+    idx = HEADERS.index("Last commit")
+    month_diff = value[idx]
+    value[idx] = "Up-to-date" if month_diff < 2 else f"{month_diff} months ago"
 writer = MarkdownTableWriter(
     table_name="FastAPI Packages", headers=HEADERS, value_matrix=value_matrix, margin=1
 )
