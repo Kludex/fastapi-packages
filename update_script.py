@@ -9,9 +9,13 @@ from pytablewriter import MarkdownTableWriter
 
 
 def kludex_sort(table: List[List[str]]):
-    stars = sorted(table, key=lambda x: x[HEADERS.index("Stars")] // 100, reverse=True)
-    last_commit = sorted(stars, key=lambda x: x[HEADERS.index("Last commit")])
-    return last_commit
+    return sorted(
+        table,
+        key=lambda x: (
+            -x[HEADERS.index("Stars")] // 100,
+            x[HEADERS.index("Last commit")],
+        ),
+    )
 
 
 GITHUB_URL = "http://github.com"
