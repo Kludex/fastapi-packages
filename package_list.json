@@ -10,8 +10,6 @@
   "mrtolkien/fastapi_simple_security",
   "frankie567/fastapi-users",
   "mfreeborn/fastapi-sqlalchemy",
-  "tortoise/tortoise-orm",
-  "python-gino/gino",
   "encode/orm",
   "collerek/ormar",
   "dmontagu/fastapi_client",
