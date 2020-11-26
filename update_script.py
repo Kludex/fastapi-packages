@@ -52,7 +52,7 @@ for value in value_matrix:
     value[idx] = "UTD" if month_diff < 2 else f"{month_diff} MA"
 writer = MarkdownTableWriter(headers=HEADERS, value_matrix=value_matrix, margin=1)
 
-writer.set_style(HEADERS.index("Package"), Style(align="center", font_weight="bold"))
+writer.set_style(HEADERS.index("Package"), Style(align="center"))
 
 with open("BEFORE_README.md", "r") as f:
     print(f.read())
