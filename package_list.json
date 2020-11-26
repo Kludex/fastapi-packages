@@ -19,6 +19,5 @@
   "madkote/fastapi-plugins",
   "skallfass/fastapi_serviceutils",
   "laurents/slowapi",
-  "perdy/starlette-prometheus",
-  "stephenhillier/starlette_exporter"
+  "perdy/starlette-prometheus"
 ]
