@@ -53,4 +53,4 @@ writer = MarkdownTableWriter(
     table_name="FastAPI Packages", headers=HEADERS, value_matrix=value_matrix, margin=1
 )
 
-writer.write_table()
+writer.write_table(flavor="github")
