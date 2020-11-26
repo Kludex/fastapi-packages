@@ -50,10 +50,10 @@ for value in value_matrix:
     idx = HEADERS.index("Last commit")
     month_diff = value[idx]
     value[idx] = "UTD" if month_diff < 2 else f"{month_diff} MA"
-writer = MarkdownTableWriter(
-    table_name="FastAPI Packages", headers=HEADERS, value_matrix=value_matrix, margin=1
-)
+writer = MarkdownTableWriter(headers=HEADERS, value_matrix=value_matrix, margin=1)
 
 writer.set_style(HEADERS.index("Package"), Style(align="center", font_weight="bold"))
 
+with open("BEFORE_README.md", "r") as f:
+    print(f.read())
 writer.write_table(flavor="github")
