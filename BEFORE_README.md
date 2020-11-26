@@ -6,12 +6,7 @@ This project is currently under development, and issues and pull requests are we
 
 If you have ideas for this repository and want to be a maintainer, feel free to reach me. 👀
 
-Other than that, if you want to add a new package you just need to run the following command and create a PR:
-
-``` bash
-# Example: python add_package.py https://github.com/Kludex/fastapi-packages/
-python add_package.py <URL>
-```
+Other than that, if you want to add new packages, just add it on the `package_list.json` and create a PR. :tada:
 
 * UTD: up-to-date
 * MA: months ago
