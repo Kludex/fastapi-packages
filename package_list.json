@@ -20,6 +20,5 @@
   "skallfass/fastapi_serviceutils",
   "laurents/slowapi",
   "perdy/starlette-prometheus",
-  "long2ice/fastapi-cache",
-  "project/fastapi-cache"
+  "long2ice/fastapi-cache"
 ]
