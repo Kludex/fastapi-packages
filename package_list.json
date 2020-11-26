@@ -19,5 +19,6 @@
   "madkote/fastapi-plugins",
   "skallfass/fastapi_serviceutils",
   "laurents/slowapi",
-  "perdy/starlette-prometheus"
+  "perdy/starlette-prometheus",
+  "sabuhish/fastapi-mqtt"
 ]

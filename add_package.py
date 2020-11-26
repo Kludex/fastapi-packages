@@ -27,4 +27,3 @@ if __name__ == "__main__":
     subprocess.check_output(["git", "checkout", "-b", f"link/{owner}-{repository}"])
     subprocess.check_output(["git", "add", "package_list.json"])
     subprocess.check_output(["git", "commit", "-m", ":memo: Add link to {repostiory}"])
-    subprocess.check_output(["git", "push", "origin", "$(current_branch)"])
