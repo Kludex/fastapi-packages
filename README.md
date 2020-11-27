@@ -4,6 +4,8 @@ This repository contains a table of **FastAPI packages** which is updated weekly
 
 This project is currently under development, and issues and pull requests are welcome. 😎
 
+If you have ideas for this repository and want to be a maintainer, feel free to reach me. 👀
+
 Other than that, if you want to add new packages, just add it on the `package_list.json` and create a PR. :tada:
 
 * UTD: up-to-date
@@ -12,7 +14,7 @@ Other than that, if you want to add new packages, just add it on the `package_li
 |                                     Package                                     |                                       Description                                        |      Created       | Last commit | Stars |
 |:-------------------------------------------------------------------------------:|------------------------------------------------------------------------------------------|--------------------|-------------|------:|
 |          [fastapi-users](https://github.com/frankie567/fastapi-users)           | Ready-to-use and customizable users management for FastAPI                               | October 05, 2019   | UTD         |   437 |
-|           [fastapi-utils](https://github.com/dmontagu/fastapi-utils)            | Reusable utilities for FastAPI                                                           | January 19, 2020   | 8 MA        |   413 |
+|           [fastapi-utils](https://github.com/dmontagu/fastapi-utils)            | Reusable utilities for FastAPI                                                           | January 19, 2020   | 8 MA        |   414 |
 |           [fastapi-admin](https://github.com/long2ice/fastapi-admin)            | FastAPI Admin Dashboard based on FastAPI and Tortoise ORM.                               | April 06, 2020     | UTD         |   326 |
 |        [fastapi_contrib](https://github.com/identixone/fastapi_contrib)         | Opinionated set of utilities on top of FastAPI                                           | August 21, 2019    | UTD         |   227 |
 |      [fastapi-sqlalchemy](https://github.com/mfreeborn/fastapi-sqlalchemy)      | Adds simple SQLAlchemy support to FastAPI                                                | November 03, 2019  | 2 MA        |   147 |
