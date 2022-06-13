@@ -20,5 +20,6 @@
   "skallfass/fastapi_serviceutils",
   "laurents/slowapi",
   "perdy/starlette-prometheus",
-  "sabuhish/fastapi-mqtt"
+  "sabuhish/fastapi-mqtt",
+  "rszamszur/fastapi-mvc"
 ]
